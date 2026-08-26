@@ -29,10 +29,13 @@ Welcome to Project 1 of the Full Stack Development Industrial Training Kit by **
 ---
 
 ## 📁 Project Structure
+
+```text
 DecodeLabs-Project1/
 ├── index.html        # Main semantic markup
 ├── style.css         # CSS Grid, Flexbox & 2025 Palette styling
 └── script.js         # Basic state management & interactivity
+```
 
 ---
 
