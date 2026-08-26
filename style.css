@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F2F0EA; 
+    color: #333333;
+    font-family: 'Roboto', sans-serif; 
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1, h2, h3, .logo {
+    font-family: 'Inter', sans-serif; 
+    font-weight: 700;
+}
+
+header {
+    background-color: #A8956F; 
+    color: #FFFFFF;
+    padding: 1rem 2rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.25rem;
+    letter-spacing: 0.5px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.3s ease;
+}
+
+.nav-links a:hover {
+    opacity: 0.8;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.main-grid {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 20px;
+    padding: 20px;
+    flex: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.sidebar {
+    background-color: #A0D4E0; 
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.sidebar ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.sidebar ul li {
+    margin-bottom: 8px;
+}
+
+.sidebar ul li a {
+    color: #1A3636;
+    text-decoration: none;
+}
+
+.content {
+    background-color: #FFFFFF;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.content h1 {
+    margin-bottom: 15px;
+    color: #2C3E50;
+}
+
+.content p {
+    margin-bottom: 20px;
+    color: #555555;
+}
+
+.primary-btn {
+    padding: 10px 20px;
+    background-color: #A8956F;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.primary-btn:hover {
+    background-color: #8E7D5B;
+}
+
+.state-output {
+    margin-top: 15px;
+    font-weight: 600;
+    color: #27ae60;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #2C3E50;
+    color: #FFFFFF;
+    font-size: 0.9rem;
+}
+
+/* Responsive Breakpoints (Tablet & Desktop) */
+@media (min-width: 768px) {
+    .main-grid {
+        grid-template-columns: 250px 1fr; 
+    }
+}
+
+@media (max-width: 767px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #A8956F;
+        padding: 15px;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .menu-toggle {
+        display: block;
+    }
+}

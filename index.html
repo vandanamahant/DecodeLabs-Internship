@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DecodeLabs - Responsive Frontend Interface</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:,">
+</head>
+<body>
+
+    <!-- Header & Navigation Landmark -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">DecodeLabs</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Blueprint</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <button class="menu-toggle" id="menuToggle">&#9776;</button>
+        </nav>
+    </header>
+
+    <!-- Main Grid Container -->
+    <main class="main-grid">
+        <aside class="sidebar">
+            <h3>Architecture</h3>
+            <ul>
+                <li><a href="#">Discovery</a></li>
+                <li><a href="#">Wireframing</a></li>
+                <li><a href="#">Implementation</a></li>
+            </ul>
+        </aside>
+        
+        <section class="content">
+            <article>
+                <h1>You Are The Architect</h1>
+                <p>Your code determines who has access to information and how the world experiences it through robust responsive logic.</p>
+                <button id="interactiveBtn" class="primary-btn">Explore State</button>
+                <p id="stateText" class="state-output"></p>
+            </article>
+        </section>
+    </main>
+
+    <!-- Footer Landmark -->
+    <footer>
+        <p>&copy; 2026 DecodeLabs Internship Program. Designed with 2025 Aesthetics.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
