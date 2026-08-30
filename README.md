@@ -28,25 +28,73 @@ Welcome to Project 1 of the Full Stack Development Industrial Training Kit by **
 
 ---
 
+## 🛠️ Project 2: Secure Backend API & Gateway Resilience
+
+1. **Backend API Development:**
+   - Built a robust server using **Node.js** and **Express.js** to handle application logic and data flow.
+   - Implemented RESTful architecture with clean noun-based routing (`/users`).
+
+2. **API Endpoints & HTTP Methods:**
+   - **GET (`/users`):** Retrieve the list of users safely.
+   - **POST (`/users`):** Create a new user with syntactic and advanced semantic validation (email format verification).
+   - **PUT (`/users/:id`):** Update existing user details.
+   - **DELETE (`/users/:id`):** Remove a user (restricted to admins).
+
+3. **Security & Resilience:**
+   - **Authentication (AuthN):** Protected routes using token verification via environment variables (`.env`).
+   - **Authorization (AuthZ):** Role-based access control ensuring only `admin` roles can delete records.
+   - **Rate Limiting:** Integrated `express-rate-limit` to guard against DDoS and spam requests, fulfilling API Gateway resilience concepts.
+
+---
+
 ## 📁 Project Structure
 
 ```text
 DecodeLabs-Project1/
-├── index.html        # Main semantic markup
-├── style.css         # CSS Grid, Flexbox & 2025 Palette styling
-└── script.js         # Basic state management & interactivity
+├── index.html                # Main semantic markup (Project 1)
+├── style.css                 # CSS Grid, Flexbox & 2025 Palette styling
+├── script.js                 # Basic state management & interactivity
+└── decodelabs-backend/       # Backend API Directory (Project 2)
+    ├── server.js             # Express server, routes, validation & rate limiter
+    ├── .env                  # Environment variables (Port & Secret Token)
+    ├── .gitignore            # Excludes node_modules and .env from git
+    └── package.json          # Backend dependencies & scripts
+
 ```
 
 ---
 
 ## 🛠️ How to Run
+* **Frontend (Project 1):**
 1. Open the project folder in **Visual Studio Code**.
 2. Install and run via **Live Server** extension.
 3. View the responsive interface live in your browser at `http://123.0.0.1:55000`.
 
+* **Backend (Project 2):** 
+1. Navigate to the backend folder:
+
+```
+cd decodelabs-backend
+```
+
+2. Install dependencies:
+
+```
+npm install
+```
+
+3. Run the server:
+
+```
+node server.js
+```
+
+4. Test endpoints in Postman using proper headers 
+(Authorization: xyz and role: admin).
+ 
 ---
 
-👨‍💻 Author
+## 👨‍💻 Author
 * **Vandana Mahant**
 
 ---
