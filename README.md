@@ -28,7 +28,7 @@ Welcome to Project 1 of the Full Stack Development Industrial Training Kit by **
 
 ---
 
-## 🛠️ Project 2: Secure Backend API & Gateway Resilience
+## 🛠️ Project 2 & 3: Secure Backend API & Gateway Resilience
 
 1. **Backend API Development:**
    - Built a robust server using **Node.js** and **Express.js** to handle application logic and data flow.
@@ -82,7 +82,7 @@ DecodeLabs-Project1/
 2. Install and run via **Live Server** extension.
 3. View the responsive interface live in your browser at `http://123.0.0.1:55000`.
 
-* **Backend (Project 2):** 
+* **Backend (Project 2 & 3):** 
 1. Navigate to the backend folder:
 
 ```
