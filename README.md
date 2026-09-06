@@ -45,20 +45,32 @@ Welcome to Project 1 of the Full Stack Development Industrial Training Kit by **
    - **Authorization (AuthZ):** Role-based access control ensuring only `admin` roles can delete records.
    - **Rate Limiting:** Integrated `express-rate-limit` to guard against DDoS and spam requests, fulfilling API Gateway resilience concepts.
 
+4. **Relational Database & Security Integration (Project 3):**
+   - Replaced in-memory data arrays with a persistent **MySQL relational database** managed via a high-performance connection pool (`config/db.js`).
+   - Implemented a structured schema (`users` and `orders` tables) linked via Foreign Key constraints (`ON DELETE CASCADE`) to preserve referential integrity.
+   - Automated schema setup using a dedicated execution script (`initDb.js` and `schema.sql`).
+   - **SQL Injection Defense:** Enforced **Parameterized Queries (`?` placeholders)** across all database queries, ensuring user-submitted inputs are treated strictly as data rather than executable statements.
+   - **Data Integrity:** Enforced schema-level constraints including `PRIMARY KEY`, `AUTO_INCREMENT`, `UNIQUE`, and `NOT NULL`.
+
 ---
 
 ## 📁 Project Structure
 
 ```text
+
 DecodeLabs-Project1/
-├── index.html                # Main semantic markup (Project 1)
-├── style.css                 # CSS Grid, Flexbox & 2025 Palette styling
-├── script.js                 # Basic state management & interactivity
-└── decodelabs-backend/       # Backend API Directory (Project 2)
-    ├── server.js             # Express server, routes, validation & rate limiter
-    ├── .env                  # Environment variables (Port & Secret Token)
-    ├── .gitignore            # Excludes node_modules and .env from git
-    └── package.json          # Backend dependencies & scripts
+├── index.html                  # Main semantic markup (Project 1)
+├── style.css                   # CSS Grid, Flexbox & 2025 Palette styling
+├── script.js                   # Basic state management & interactivity
+└── decodelabs-backend/         # Backend API Directory (Project 2 & 3)
+    ├── config/                 # Configuration folder
+    │   └── db.js               # MySQL connection pool configuration
+    ├── server.js               # Express server, CRUD routes & validation
+    ├── schema.sql              # Relational database tables (users & orders)
+    ├── initDb.js               # Database schema initialization script
+    ├── .env                    # Environment variables (Port & Secret Token)
+    ├── .gitignore              # Excludes node_modules and .env from git
+    └── package.json            # Backend dependencies & scripts
 
 ```
 
@@ -82,14 +94,19 @@ cd decodelabs-backend
 ```
 npm install
 ```
+3. Run the database initialization script:
 
-3. Run the server:
+```
+node initDb.js
+```
+
+4. Run the server:
 
 ```
 node server.js
 ```
 
-4. Test endpoints in Postman using proper headers 
+5. Test endpoints in Postman using proper headers 
 (Authorization: xyz and role: admin).
  
 ---
