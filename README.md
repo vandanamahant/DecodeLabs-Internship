@@ -54,6 +54,19 @@ Welcome to Project 1 of the Full Stack Development Industrial Training Kit by **
 
 ---
 
+## ⚡ Project 4: Frontend & Backend Integration
+
+1. **Asynchronous Communication:**
+   - Utilized native `fetch()` API combined with `async/await` handling inside `script.js` to request and retrieve data from the backend server without blocking the main browser thread.
+
+2. **CORS Policy Resolution:**
+   - Configured and implemented the `cors` middleware on the Express server to securely permit cross-origin communication between the client-side frontend and the backend API.
+
+3. **Dynamic DOM State Management:**
+   - Handled JSON parsing (`response.json()`), response status validation (`response.ok`), and real-time DOM injection to display persistent database records dynamically on the user interface.
+
+---
+
 ## 📁 Project Structure
 
 ```text
@@ -108,6 +121,14 @@ node server.js
 
 5. Test endpoints in Postman using proper headers 
 (Authorization: xyz and role: admin).
+
+6. Frontend & Full-Stack Integration (Project 1 & 4):
+
+1. Open the main project folder in Visual Studio Code.
+
+2. Run via Live Server extension (typically opens at http://127.0.0.1:0000).
+
+3. Click the interactive button on the interface to trigger the asynchronous fetch() request, communicating with the running backend to dynamically render MySQL records on the screen.
  
 ---
 
